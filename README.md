@@ -1,3 +1,3 @@
 
 
-some help for django in vim
+django in zen mode.
