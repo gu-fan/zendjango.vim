@@ -1,1 +1,3 @@
-init
+
+
+some help for django in vim
