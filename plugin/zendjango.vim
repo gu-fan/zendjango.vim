@@ -140,17 +140,17 @@ function! s:build_pth(len) "{{{
     endif
 endfunction "}}}
 
-nno <leader>j1 :call <SID>dj_edit("models.py", "app")<CR>
-nno <leader>j2 :call <SID>dj_edit("views.py",  "app")<CR>
-nno <leader>j3 :call <SID>dj_edit("urls.py",   "app")<CR>
-nno <leader>j4 :call <SID>dj_edit("admin.py",  "app")<CR>
-nno <leader>j5 :call <SID>dj_edit("tests.py",  "app")<CR>
-nno <leader>j6 :call <SID>dj_edit("","tmp" )<cr>
-" nno <leader>j7 :call <SID>dj_edit("templatetags/" )<cr>
-nno <leader>j8 :call <SID>dj_edit("wsgi.py", "pro")<CR>
-nno <leader>j9 :call <SID>dj_edit("urls.py", "pro")<CR>
-nno <leader>j0 :call <SID>dj_edit("settings.py", "pro")<CR>
-nno <leader>jh :setl ft=htmldjango<CR>
+nno <leader>51 :call <SID>dj_edit("models.py", "app")<CR>
+nno <leader>52 :call <SID>dj_edit("views.py",  "app")<CR>
+nno <leader>53 :call <SID>dj_edit("urls.py",   "app")<CR>
+nno <leader>54 :call <SID>dj_edit("admin.py",  "app")<CR>
+nno <leader>55 :call <SID>dj_edit("tests.py",  "app")<CR>
+nno <leader>56 :call <SID>dj_edit("templates/","app" )<cr>
+nno <leader>57 :call <SID>dj_edit("templatetags/","app" )<cr>
+nno <leader>58 :call <SID>dj_edit("wsgi.py", "pro")<CR>
+nno <leader>59 :call <SID>dj_edit("urls.py", "pro")<CR>
+nno <leader>50 :call <SID>dj_edit("settings.py", "pro")<CR>
+nno <leader>5h :setl ft=htmldjango<CR>
 
 let g:default_man_dir = ''
 let g:default_pro_dir = ''
@@ -238,7 +238,7 @@ aug django_folder "{{{
     au! BufEnter {models,views,tests}.py,*/models/*.py,*/views/*.py call <SID>dj_setdir("app")
     au! BufEnter {settings,wsgi}.py,*/settings/*.py call <SID>dj_setdir("pro")
     au! BufEnter manage.py call <SID>dj_setdir("man")
-    au! BufWinEnter *templates/**/*.html call s:dj_sethtml()
+    au! BufWinEnter *templates/**/*.html call <SID>dj_sethtml()
 aug END "}}}
 
 com! -complete=customlist,DjAdmList -nargs=* Djadmin  call s:dj_admin(<q-args>)
