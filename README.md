@@ -1,3 +1,2 @@
 
-
-django in zen mode.
+zen of django
